@@ -32,17 +32,20 @@ Un cop aixecat el contenidor amb `docker-compose up -d`, hem accedit a la interf
 
 Hem especificat les interfícies de xarxa per l'entorn web i el servidor DNS, i hem creat les credencials d'administrador.
 
-![Configuració de ports de xarxa](02_interfaces_config.png)
+![Configuració de ports de xarxa]<img width="1280" height="800" alt="01_setup_welcome" src="https://github.com/user-attachments/assets/9036c953-70de-4f83-85ce-e6bcf7eb5324" />
+
 *Configuració de les interfícies on escolta el servei web i el DNS*
 
-![Creació d'usuari i contrasenya](03_credentials_config.png)
+![Creació d'usuari i contrasenya]<img width="1280" height="800" alt="02_interfaces_config" src="https://github.com/user-attachments/assets/a663febd-f3e8-4040-b282-d035457daa56" />
+
 *Configuració de l'usuari administrador i contrasenya*
 
 ## 3. Filtratge de Tràfic i Llistes de Bloqueig
 
 Per demostrar la funcionalitat de bloqueig d'anuncis i rastreig, s'ha afegit una regla personalitzada de bloqueig per al domini `ads.tracker.com`. Les regles es poden configurar des de la pestanya **Filters > Custom filtering rules**.
 
-![Regla personalitzada aplicada](10_custom_filter_page.png)
+![Regla personalitzada aplicada]<img width="1280" height="800" alt="03_credentials_config" src="https://github.com/user-attachments/assets/d392bf18-91ac-4e9a-8908-1ea6304d1fe3" />
+
 *S'ha afegit `||ads.tracker.com^` a les regles de filtratge customitzades*
 
 A continuació, hem comprovat el funcionament de la resolució DNS i el filtratge configurant la nostra màquina per utilitzar AdGuard Home com a DNS. Com es pot veure en el test següent, la resolució per al domini bloquejat retorna `0.0.0.0`, la qual cosa significa que AdGuard ha bloquejat amb èxit la consulta i ha protegit la xarxa:
