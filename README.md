@@ -35,9 +35,9 @@ Hem especificat les interfícies de xarxa per l'entorn web i el servidor DNS, i 
 
 ## 3. Filtratge de Tràfic i Llistes de Bloqueig
 
-Per demostrar la funcionalitat de bloqueig d'anuncis i rastreig, s'ha afegit una regla personalitzada de bloqueig per al domini `ads.tracker.com`. Les regles es poden configurar des de la pestanya **Filters > Custom filtering rules**.
+Per demostrar la funcionalitat de bloqueig d'anuncis i rastreig, s'ha afegit una regla personalitzada de bloqueig per al domini `fcbarcelona.es`. Les regles es poden configurar des de la pestanya **Filters > Custom filtering rules**.
 
-*S'ha afegit `||ads.tracker.com^` a les regles de filtratge customitzades*
+*S'ha afegit `||fcbarcelona.es^` a les regles de filtratge customitzades*
 
 A continuació, hem comprovat el funcionament de la resolució DNS i el filtratge configurant la nostra màquina per utilitzar AdGuard Home com a DNS. Com es pot veure en el test següent, la resolució per al domini bloquejat retorna `0.0.0.0`, la qual cosa significa que AdGuard ha bloquejat amb èxit la consulta i ha protegit la xarxa:
 
